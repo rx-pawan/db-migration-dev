@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <include file="scripts/testdb_1.sql" relativeToChangelogFile="true"/>
+ <include file="scripts/testdb_2.sql" relativeToChangelogFile="true"/>
+
+  <!-- Also include the tagging itself as a changeSet... -->
+    <changeSet author="salerno" id="tag_version_4_2_0">
+        <tagDatabase tag="version_4.4.0" />
+    </changeSet>
+    <!-- version 4.2.0 ends here -->
+</databaseChangeLog>
